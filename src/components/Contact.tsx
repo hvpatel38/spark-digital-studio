@@ -1,18 +1,20 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Mail, Phone, MapPin } from "lucide-react";
-
 const Contact = () => {
-  return (
-    <section id="contact" className="py-24 md:py-32 relative">
+  return <section id="contact" className="py-24 md:py-32 relative">
       <div className="container relative z-10 px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="max-w-4xl mx-auto text-center"
-        >
+        <motion.div initial={{
+        opacity: 0,
+        y: 30
+      }} whileInView={{
+        opacity: 1,
+        y: 0
+      }} viewport={{
+        once: true
+      }} transition={{
+        duration: 0.8
+      }} className="max-w-4xl mx-auto text-center">
           {/* CTA Card */}
           <div className="relative p-12 md:p-16 rounded-3xl bg-gradient-to-b from-card to-secondary border border-border overflow-hidden">
             {/* Background glow */}
@@ -36,22 +38,20 @@ const Contact = () => {
             <div className="flex flex-col md:flex-row gap-8 justify-center items-center text-muted-foreground relative">
               <a href="mailto:hello@agency.com" className="flex items-center gap-2 hover:text-primary transition-colors">
                 <Mail className="w-5 h-5" />
-                <span>hello@agency.com</span>
+                <span>harshwrapaura@gmail.com</span>
               </a>
               <a href="tel:+1234567890" className="flex items-center gap-2 hover:text-primary transition-colors">
                 <Phone className="w-5 h-5" />
-                <span>+1 (234) 567-890</span>
+                <span>+91 9426561918</span>
               </a>
               <span className="flex items-center gap-2">
                 <MapPin className="w-5 h-5" />
-                <span>New York, NY</span>
+                <span>Ahmedabad, Gujarat, india</span>
               </span>
             </div>
           </div>
         </motion.div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Contact;
