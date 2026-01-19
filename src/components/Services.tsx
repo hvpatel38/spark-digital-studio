@@ -120,15 +120,19 @@ const Services = () => {
             <motion.div
               key={service.title}
               variants={itemVariants}
-              className={`group relative p-8 rounded-2xl bg-card border transition-all duration-500 card-shadow hover:glow-primary ${
+              className={`group relative rounded-2xl bg-card border transition-all duration-500 card-shadow hover:glow-primary ${
                 service.title === "Social Media Marketing" 
-                  ? "border-primary border-2" 
-                  : "border-border hover:border-primary/50"
+                  ? "border-primary border-2 p-10 lg:col-span-2" 
+                  : "border-border hover:border-primary/50 p-8"
               }`}
             >
               {/* Icon */}
-              <div className="w-14 h-14 rounded-xl bg-gradient-primary flex items-center justify-center mb-6 transition-transform duration-500 group-hover:scale-110">
-                <service.icon className="w-7 h-7 text-primary-foreground" />
+              <div className={`rounded-xl bg-gradient-primary flex items-center justify-center mb-6 transition-transform duration-500 group-hover:scale-110 ${
+                service.title === "Social Media Marketing" ? "w-16 h-16" : "w-14 h-14"
+              }`}>
+                <service.icon className={`text-primary-foreground ${
+                  service.title === "Social Media Marketing" ? "w-8 h-8" : "w-7 h-7"
+                }`} />
               </div>
 
               {/* Tag */}
@@ -137,10 +141,14 @@ const Services = () => {
               </span>
 
               {/* Content */}
-              <h3 className="font-display text-xl font-semibold mb-3 group-hover:text-primary transition-colors">
+              <h3 className={`font-display font-semibold mb-3 group-hover:text-primary transition-colors ${
+                service.title === "Social Media Marketing" ? "text-2xl" : "text-xl"
+              }`}>
                 {service.title}
               </h3>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className={`text-muted-foreground leading-relaxed ${
+                service.title === "Social Media Marketing" ? "text-lg" : ""
+              }`}>
                 {service.description}
               </p>
 
