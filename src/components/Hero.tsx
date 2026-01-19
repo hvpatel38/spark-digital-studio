@@ -75,9 +75,9 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 1 }}
           className="mt-24 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
         >
-          {[
-            { value: "150+", label: "Clients Served" },
-            { value: "500+", label: "Campaigns Launched" },
+{[
+            { value: "10+", label: "Clients Served" },
+            { value: "100+", label: "Campaigns Launched" },
             { value: "300%", label: "Average ROI" },
             { value: "24/7", label: "Support" },
           ].map((stat, index) => (
