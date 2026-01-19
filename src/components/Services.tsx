@@ -120,7 +120,11 @@ const Services = () => {
             <motion.div
               key={service.title}
               variants={itemVariants}
-              className="group relative p-8 rounded-2xl bg-card border border-border hover:border-primary/50 transition-all duration-500 card-shadow hover:glow-primary"
+              className={`group relative p-8 rounded-2xl bg-card border transition-all duration-500 card-shadow hover:glow-primary ${
+                service.title === "Social Media Marketing" 
+                  ? "border-primary border-2" 
+                  : "border-border hover:border-primary/50"
+              }`}
             >
               {/* Icon */}
               <div className="w-14 h-14 rounded-xl bg-gradient-primary flex items-center justify-center mb-6 transition-transform duration-500 group-hover:scale-110">
