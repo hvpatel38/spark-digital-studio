@@ -81,7 +81,7 @@ const About = () => {
               <div className="absolute bottom-8 left-8 w-24 h-24 rounded-xl bg-secondary border border-border animate-float flex-col flex items-start justify-center" style={{
               animationDelay: "-3s"
             }}>
-                <span className="text-2xl font-display font-bold text-accent">SOCIAL MEDIA MANAGEMENT</span>
+                <span className="text-2xl font-bold text-accent mx-[20px] font-mono">SSM</span>
               </div>
             </div>
           </motion.div>
